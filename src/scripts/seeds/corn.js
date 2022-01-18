@@ -1,4 +1,4 @@
-const createCorn = () => {
+export const createCorn = () => {
     const stalkCorn = [
         {
             type: 'Corn',
@@ -13,4 +13,4 @@ const createCorn = () => {
     ]
     return stalkCorn
 }
-let newCorn = createCorn()
+//let newCorn = createCorn()
