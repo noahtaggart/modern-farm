@@ -1,30 +1,37 @@
 //define and export plantSeeds()
-    //must use plan[innerPlan[]] as a parameter
+
+import { usePlants, addPlant } from "./field.js"
+import { createSunflower } from "./seeds/sunflower.js"
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createCorn } from "./seeds/corn.js"
+import { createPotato } from "./seeds/potato.js"
+import { createWheat } from "./seeds/wheat.js"
+import { createSoybean } from "./seeds/soybean.js"
+//must use plan[innerPlan[]] as a parameter
 export const plantSeeds = (currentPlanArray) => {
-    for (let i=0; i< currentPlanArray.length; i++) {
-        let innerArrayLength = currentPlanArray[i].length;
-        for (let j=0; j < innerArrayLength; j++) {
-            if (innerArrayLength.type === 'Asparagus') {
+    for (const planArray of currentPlanArray) {
+        for (const plan of planArray) {
+            if (plan === 'Asparagus') {
                 const newAsparagus = createAsparagus()
-                currentPlanArray.push(newAsparagus)
-            } else if (innerArrayLength.type === 'Corn') {
+                addPlant(newAsparagus)
+            } else if (plan === 'Corn') {
                 const newCorn = createCorn()
-                currentPlanArray.push(newCorn)
-            } else if (innerArrayLength.type === 'Potato') {
+                addPlant(newCorn)
+            } else if (plan === 'Potato') {
                 const newPotato = createPotato()
-                currentPlanArray.push(newPotato)
-            } else if (innerArrayLength.type === 'Soybean') {
+                addPlant(newPotato)
+            } else if (plan === 'Soybean') {
                 const newSoybean = createSoybean()
-                currentPlanArray.push(newSoybean)
-            } else if (innerArrayLength.type === 'Sunflower') {
+                addPlant(newSoybean)
+            } else if (plan === 'Sunflower') {
                 const newSunflower = createSunflower()
-                currentPlanArray.push(newSunflower)
-            } else if (innerArrayLength.type === 'Wheat') {
+                addPlant(newSunflower)
+            } else if (plan === 'Wheat') {
                 const newWheat = createWheat()
-                currentPlanArray.push(newWheat)
+                addPlant(newWheat)
             }
         }
-    }return currentPlanArray
+    } return usePlants()
 
 }
 

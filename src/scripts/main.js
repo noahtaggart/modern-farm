@@ -25,5 +25,10 @@ const newWheat = createWheat()
 import { plantSeeds } from './tractor.js'
 
 const plantsArray = plantSeeds(yearlyPlan)
-console.log(plantsArray)
+//console.log(plantsArray)
+import { harvestPlants } from './harvester.js'
+
+const harvestedPlants = harvestPlants(plantsArray)
+console.log(harvestedPlants)
+
 
