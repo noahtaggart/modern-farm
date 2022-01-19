@@ -16,6 +16,8 @@ export const plantSeeds = (currentPlanArray) => {
                 addPlant(newAsparagus)
             } else if (plan === 'Corn') {
                 const newCorn = createCorn()
+                //addPlant(newCorn[0])
+                //addPlant(newCorn[1])
                 addPlant(newCorn)
             } else if (plan === 'Potato') {
                 const newPotato = createPotato()
