@@ -20,3 +20,23 @@ export const harvestPlants = (plantArray) => {
     }
     return seedObjects
 }
+/*
+*/
+
+
+
+
+
+/*
+if (plant.type === "asparagus") {
+    seedObjects.push(plant)
+} else if (plant.type === "potato") {
+    seedObjects.push(plant)
+} else if (plant.type === "soybean") {
+    seedObjects.push(plant)
+} else if (plant.type === "sunflower") {
+    seedObjects.push(plant)
+} else if (plant.type === "wheat") {
+    seedObjects.push(plant)
+} else {
+}*/
