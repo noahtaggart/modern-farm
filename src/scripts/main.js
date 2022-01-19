@@ -1,25 +1,25 @@
 console.log("Welcome to the main module")
 
-import { createPlan } from "/mnt/c/Users/noaht/workspace/modern-farm/src/scripts/plan.js" 
+import { createPlan } from "./plan.js" 
 
 const yearlyPlan = createPlan()
 
-import { createAsparagus } from "/mnt/c/Users/noaht/workspace/modern-farm/src/scripts/seeds/asparagus.js"
+import { createAsparagus } from "./seeds/asparagus.js"
 const newAsparagus = createAsparagus()
 
-import { createCorn } from '/mnt/c/Users/noaht/workspace/modern-farm/src/scripts/seeds/corn.js'
+import { createCorn } from './seeds/corn.js'
 const newCorn = createCorn()
 
-import { createPotato } from '/mnt/c/Users/noaht/workspace/modern-farm/src/scripts/seeds/potato.js'
+import { createPotato } from './seeds/potato.js'
 const newPotato = createPotato()
 
-import { createSoybean } from '/mnt/c/Users/noaht/workspace/modern-farm/src/scripts/seeds/soybean.js'
+import { createSoybean } from './seeds/soybean.js'
 const newSoybean = createSoybean()
 
-import { createSunflower } from '/mnt/c/Users/noaht/workspace/modern-farm/src/scripts//seeds/sunflower.js'
+import { createSunflower } from './seeds/sunflower.js'
 const newSunflower = createSunflower()
 
-import { createWheat } from '/mnt/c/Users/noaht/workspace/modern-farm/src/scripts/seeds/wheat.js'
+import { createWheat } from './seeds/wheat.js'
 const newWheat = createWheat()
 
 import { plantSeeds } from './tractor.js'
@@ -28,7 +28,13 @@ const plantsArray = plantSeeds(yearlyPlan)
 //console.log(plantsArray)
 import { harvestPlants } from './harvester.js'
 
-const harvestedPlants = harvestPlants(plantsArray)
-console.log(harvestedPlants)
+export const harvestedPlants = harvestPlants(plantsArray)
+
+import { catalog } from "./catalog.js"
+
+const catalogHTML = catalog(harvestedPlants)
+//console.log(catalogHTML)
+
+document.querySelector(".container").innerHTML += catalogHTML
 
 

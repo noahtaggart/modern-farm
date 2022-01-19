@@ -1,8 +1,8 @@
 export const createWheat = () => {
     const newSeed = {}
     newSeed.type = 'Wheat'
-    newSeed.height = 24
-    newSeed.output = 4
+    newSeed.height = 230
+    newSeed.output = 6
     return newSeed
 }
 //let newWheat = createWheat()
