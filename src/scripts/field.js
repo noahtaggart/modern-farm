@@ -10,5 +10,5 @@ export const addPlant = (seedObject)  => {
 //define and export usePlants()
     //returns copy of the field array
 export const usePlants = () => {
-    return fieldArray
+    return fieldArray.map(fieldArray => ({...fieldArray}))
 }
